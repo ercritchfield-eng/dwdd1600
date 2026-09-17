@@ -1,0 +1,136 @@
+body {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #272932;
+    background-color: #FAF7F2;
+    margin: 0;
+}
+
+/* heading styling */
+header {
+    background-color: #272932;
+    padding: 1rem 10px;
+}
+header span {
+    color: #Fbbfca;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+/* navigation */
+nav {
+    background-color: #7d8491;
+}
+nav ul {
+    margin: 0;
+    list-style-type: none;
+    padding: 0 10px;
+    display: flex;
+}
+nav a {
+    display: block;
+    padding: 0.83rem 1rem;
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #272932;
+    font-weight: 700;
+}
+nav li.active a {
+    background-color: #272932;
+    color: #Fbbfca;
+}
+nav li a:hover {
+    text-decoration: none;
+    background-color: #Fbbfca;
+    color: #272932;
+}
+
+/* main */
+main {
+    padding: 1rem 10px;
+}
+
+/* heading */
+h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #272932;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+
+}
+h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #272932;
+    border-bottom: 3px solid #7d8491;
+    border-radius: 4px;
+    padding-bottom: 4px;
+    margin-top: 20px;
+}
+
+/* paragraphs */
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #272932;
+}
+
+/* pseudo class */ 
+main a:hover {
+    color: #7d8491;
+    text-decoration: underline;
+}
+ul {
+    list-style-type: square;
+    margin: 15px 0;
+    padding-left: 30px;
+}
+dl {
+    margin: 15px 0;
+    padding: 10px 15px;
+    background-color: #Fbbfca;
+    border-radius: 6px;
+}
+dt {
+    font-weight: 700;
+    color: #272932;
+}
+dd {
+    margin-left: 15px;
+    margin-bottom: 8px;
+}
+
+/* links */
+a{
+    color: #7d8491;
+    text-decoration: underline;
+    font-weight: 400;
+    transition: color 0.2s ease;
+}
+a:hover {
+    color: #fbbfca;
+    text-decoration: none;
+}
+
+/* footer */
+footer{
+    color: #Fbbfca;
+    text-decoration: none;
+}
+footer a:hover {
+    color: #fbbfca;
+    text-decoration: underline;
+}
+footer {
+    background-color: #272932;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: .8rem;
+    color: #7d8491;
+}
+footer p {
+    margin: 0;
+    letter-spacing: 2px;
+}
