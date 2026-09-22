@@ -36,9 +36,9 @@ nav a {
     color: #272932;
     font-weight: 700;
 }
-nav li.active a {
-    background-color: #272932;
-    color: #Fbbfca;
+nav li a.active  {
+    background-color: #Fbbfca;
+    color: #272932;
 }
 nav li a:hover {
     text-decoration: none;
