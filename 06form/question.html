@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond the Beat - Fan Inquiries</title>
+    <link rel="stylesheet" href="travler.css">
+    <link rel="stylesheet" href="question.css">
+</head>
+<body>
+    <!-- Site Header -->
+    <header>
+        <span>Beyond the Beat</span>
+    </header>
+
+    <!-- Navigation (Include question.html with active class; omit thanks.html) -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="visit.html">Visit</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="question.html" class="active">Ask Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Form Content -->
+    <main>
+        <h1>Send Us a Question</h1>
+        <form method="get" action="thanks.html" class="myForm">
+            
+            <!-- Fieldset 1: Contact Information -->
+            <fieldset>
+                <legend>Fan Details</legend>
+                <label>First Name*
+                    <input type="text" name="fname" required>
+                </label>
+                <label>Last Name*
+                    <input type="text" name="lname" required>
+                </label>
+                <label>Email Address*
+                    <input type="email" name="email" required>
+                </label>
+                <label>Phone Number
+                    <input type="tel" name="phone" placeholder="801-222-0123">
+                </label>
+            </fieldset>
+
+            <!-- Fieldset 2: Inquiry Topic -->
+            <fieldset>
+                <legend>Topic of Inquiry</legend>
+                <label>
+                    <input type="radio" name="topic" value="tours" checked> Tour Dates & Venues
+                </label>
+                <label>
+                    <input type="radio" name="topic" value="vinyl"> Album & Vinyl Releases
+                </label>
+                <label>
+                    <input type="radio" name="topic" value="merch"> Official Merch
+                </label>
+            </fieldset>
+
+            <!-- Fieldset 3: Preferences, Checkboxes, Dropdown, Textarea -->
+            <fieldset>
+                <legend>Inquiry Specifics</legend>
+                <label>Select Music Category:
+                    <select name="category">
+                        <option value="">Please Select an Option</option>
+                        <option value="kpop">K-Pop Releases</option>
+                        <option value="indie">Indie & Alternative</option>
+                        <option value="orchestral">Classical & Instrumental</option>
+                    </select>
+                </label>
+
+                <p>Notify me about updates for:</p>
+                <label>
+                    <input type="checkbox" name="notify_tickets" value="yes"> Ticket drops
+                </label>
+                <label>
+                    <input type="checkbox" name="notify_interviews" value="yes"> Artist interviews
+                </label>
+                <label>
+                    <input type="checkbox" name="notify_giveaways" value="yes"> Fan giveaways
+                </label>
+
+                <label>Your Question or Comment:
+                    <textarea name="comments" rows="4"></textarea>
+                </label>
+            </fieldset>
+
+            <!-- Submit Button -->
+            <input type="submit" value="Send Questions">
+        </form>
+    </main>
+
+    <!-- Site Footer -->
+    <footer>
+        <p>&copy; 2026 &bull; Beyond the Beat &bull; <a href="mailto:contact@beyondthebeat.com">Email Us</a></p>
+    </footer>
+</body>
+</html>
