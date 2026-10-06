@@ -252,3 +252,9 @@ footer p {
     background-color: #FBBFCA;
     color: #272932;
 }
+body {
+    font-family: 'Oswald', sans-serif;
+}
+h1, legend, label, input, textarea, select, button {
+    font-family: 'Oswald', sans-serif;
+}
