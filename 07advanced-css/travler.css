@@ -1,0 +1,371 @@
+/* =========================================================
+   1. BOX MODEL & BASE RESET
+   ========================================================= */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #272932;
+    background-color: #FAF7F2;
+    margin: 0;
+}
+
+/* =========================================================
+   2. FULL-WIDTH BARS & 960PX CENTERED CONTENT
+   ========================================================= */
+header {
+    background-color: #272932;
+    width: 100%;
+}
+
+nav {
+    background-color: #7d8491;
+    width: 100%;
+}
+
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1rem 10px;
+}
+
+footer {
+    background-color: #272932;
+    width: 100%;
+    clear: both;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-size: 0.85rem;
+    color: #7d8491;
+}
+
+footer address,
+footer p {
+    max-width: 960px;
+    margin: 0.4rem auto;
+    letter-spacing: 1px;
+}
+
+/* =========================================================
+   3. SITE LOGO & HEADER (FLEXBOX)
+   ========================================================= */
+.header-content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1rem 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+header .site-logo {
+    height: 52px;
+    max-width: 100px;
+    max-height: 100px;
+    width: auto;
+    display: block;
+    filter: brightness(0) invert(1);
+    flex-shrink: 0;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #FBBFCA;
+    margin: 0 0 2px 0;
+    line-height: 1.1;
+}
+
+header span {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #FAF7F2;
+    display: block;
+}
+
+/* =========================================================
+   4. RESPONSIVE NAVIGATION & IN-LINE MEDIA QUERIES
+   ========================================================= */
+/* Small Screen Navigation (Phones - single column stack) */
+@media only screen and (max-width: 800px) {
+    nav ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    nav a {
+        display: block;
+        text-align: center;
+        padding: 0.83rem 1rem;
+        color: #272932;
+        text-decoration: none;
+        border-bottom: solid 1px #eee;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 1.1rem;
+    }
+
+    /* CSS Gradient on active mobile tab */
+    nav li.active a {
+        background-color: #272932;
+        color: #FFFFFF;
+        background-image: linear-gradient(to bottom, #272932, #656b83);
+    }
+
+    nav li a:hover {
+        background-color: #FBBFCA;
+        color: #272932;
+        text-decoration: none;
+    }
+}
+
+/* Large Screen Navigation (Tablet & Desktop - horizontal bar) */
+@media only screen and (min-width: 801px) {
+    nav {
+        border-top: solid 1px #E0E6E6;
+    }
+
+    nav ul {
+        margin: 0 auto;
+        padding: 0 10px;
+        max-width: 960px;
+        list-style-type: none;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    nav a {
+        display: block;
+        padding: 1.2rem 1.5rem 0.6rem 1.5rem;
+        font-size: 1rem;
+        text-decoration: none;
+        color: #272932;
+        font-weight: 700;
+        text-transform: uppercase;
+        border-bottom: solid 3px transparent;
+    }
+
+    /* CSS Gradient on active desktop tab */
+    nav li.active a {
+        color: #FBBFCA;
+        background-color: #272932;
+        background-image: linear-gradient(to bottom, #272932, #404452);
+        border-bottom: solid 3px #FBBFCA;
+    }
+
+    nav li a:hover {
+        background-color: #FBBFCA;
+        color: #272932;
+        text-decoration: none;
+    }
+}
+
+/* =========================================================
+   5. HERO IMAGE (FULL-WIDTH SCALING)
+   ========================================================= */
+.hero {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1.5rem 0;
+    clear: both;
+}
+
+/* =========================================================
+   6. TYPOGRAPHY & GENERAL STYLES
+   ========================================================= */
+h1, legend, label, input, textarea, select, button {
+    font-family: 'Oswald', sans-serif;
+}
+
+main h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #272932;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #272932;
+    border-bottom: 3px solid #7d8491;
+    border-radius: 4px;
+    padding-bottom: 4px;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #272932;
+}
+
+a {
+    color: #7d8491;
+    text-decoration: underline;
+    font-weight: 400;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #fbbfca;
+    text-decoration: none;
+}
+
+main a:hover {
+    color: #7d8491;
+    text-decoration: underline;
+}
+
+ul {
+    list-style-type: square;
+    margin: 15px 0;
+    padding-left: 30px;
+}
+
+dl {
+    margin: 15px 0;
+    padding: 10px 15px;
+    background-color: #Fbbfca;
+    border-radius: 6px;
+}
+
+dt {
+    font-weight: 700;
+    color: #272932;
+}
+
+dd {
+    margin-left: 15px;
+    margin-bottom: 8px;
+}
+
+/* =========================================================
+   7. GALLERY & HOVER SHADOWS
+   ========================================================= */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1rem 0;
+}
+
+.gallery figure {
+    margin: 0;
+    width: 300px;
+    text-align: center;
+}
+
+.gallery img {
+    width: 300px;
+    height: 225px;
+    object-fit: cover;
+    display: block;
+    border-radius: 4px;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover drop shadow */
+.gallery img:hover {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.45);
+    transform: translateY(-2px);
+}
+
+.gallery figcaption {
+    padding-top: 0.5rem;
+    font-size: 0.95rem;
+}
+
+/* =========================================================
+   8. FORM LAYOUT & STYLING
+   ========================================================= */
+.myForm {
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.myForm fieldset {
+    border: 2px solid #7D8491;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-bottom: 25px;
+    background-color: #ffffff;
+}
+
+.myForm legend {
+    padding: 0 10px;
+    font-weight: bold;
+    color: #272932;
+}
+
+.myForm label {
+    display: block;
+    margin-bottom: 12px;
+    color: #272932;
+    font-weight: 500;
+}
+
+.myForm input[type="text"],
+.myForm input[type="email"],
+.myForm input[type="tel"],
+.myForm select,
+.myForm textarea {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #7D8491;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    background-color: #fcfcfc;
+    color: #272932;
+}
+
+.myForm input[type="radio"],
+.myForm input[type="checkbox"] {
+    display: inline-block;
+    width: auto;
+    margin-right: 8px;
+}
+
+.myForm input[type="submit"] {
+    background-color: #272932;
+    color: #FBBFCA;
+    border: 2px solid #272932;
+    border-radius: 6px;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.myForm input[type="submit"]:hover {
+    background-color: #FBBFCA;
+    color: #272932;
+}
+
+/* =========================================================
+   9. FOOTER LINKS
+   ========================================================= */
+footer a {
+    color: #Fbbfca;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
