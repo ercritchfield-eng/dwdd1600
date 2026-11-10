@@ -1,0 +1,385 @@
+/* 
+   BOX MODEL & BASE RESET
+    */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #443742;
+    background-color: #FAF7F2;
+    margin: 0;
+}
+
+/* 
+    FULL-WIDTH BARS & 960PX CENTERED CONTENT
+    */
+header {
+    background-color: #443742;
+    width: 100%;
+}
+
+nav {
+    background-color: #DBDBDB;
+    width: 100%;
+}
+
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1.5rem 10px;
+}
+
+footer {
+    background-color: #443742;
+    width: 100%;
+    clear: both;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-size: 0.85rem;
+    color: #DBDBDB;
+}
+
+footer address,
+footer p {
+    max-width: 960px;
+    margin: 0.4rem auto;
+    letter-spacing: 1px;
+}
+
+/* 
+    SITE LOGO & HEADER (FLEXBOX)
+    */
+.header-content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1rem 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+header .site-logo {
+    height: 52px;
+    width: auto;
+    background-color: #ffffff;
+    padding: 4px 8px;
+    border-radius: 6px;
+    display: block;
+    flex-shrink: 0;
+}
+
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #52796F;
+    margin: 0 0 2px 0;
+    line-height: 1.1;
+}
+
+header span {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #FAF7F2;
+    display: block;
+}
+
+/* 
+    RESPONSIVE NAVIGATION & MEDIA QUERIES
+    */
+/* Small Screen Navigation (Phones - Rounded, Separated Buttons) */
+@media only screen and (max-width: 800px) {
+    nav {
+        background-color: #FAF7F2;
+        padding: 10px;
+    }
+    
+    nav ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    nav li {
+        margin-bottom: 8px;
+    }
+
+    nav a {
+        display: block;
+        text-align: center;
+        padding: 0.83rem 1rem;
+        color: #443742;
+        text-decoration: none;
+        border-radius: 25px; /* Rounded buttons for mobile requirement */
+        border: solid 1px #DBDBDB;
+        background-color: #FFFFFF;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 1.1rem;
+    }
+
+    /* CSS Gradient on active mobile tab */
+    nav li.active a {
+        color: #FFFFFF;
+        background-image: linear-gradient(to bottom, #443742, #656b83);
+        border-color: #443742;
+    }
+
+    nav li a:hover {
+        background-color: #52796F;
+        color: #443742;
+    }
+}
+
+/* Large Screen Navigation (Tablet & Desktop - Horizontal Bar) */
+@media only screen and (min-width: 801px) {
+    nav {
+        border-top: solid 1px #E0E6E6;
+    }
+
+    nav ul {
+        margin: 0 auto;
+        padding: 0 10px;
+        max-width: 960px;
+        list-style-type: none;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    nav a {
+        display: block;
+        padding: 1.2rem 1.5rem 0.6rem 1.5rem;
+        font-size: 1rem;
+        text-decoration: none;
+        color: #443742;
+        font-weight: 700;
+        text-transform: uppercase;
+        border-bottom: solid 3px transparent;
+    }
+
+    /* CSS Gradient on active desktop tab */
+    nav li.active a {
+        color: #52796F;
+        background-color: #443742;
+        background-image: linear-gradient(to bottom, #443742, #404452);
+        border-bottom: solid 3px #52796F;
+    }
+
+    nav li a:hover {
+        background-color: #52796F;
+        color: #443742;
+        text-decoration: none;
+    }
+}
+
+/* 
+   HERO IMAGE & TYPOGRAPHY
+    */
+.hero {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1.5rem 0;
+    border-radius: 6px;
+}
+
+main h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #443742;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #443742;
+    border-bottom: 3px solid #DBDBDB;
+    border-radius: 4px;
+    padding-bottom: 4px;
+    margin-top: 30px;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #443742;
+}
+
+/* 
+  DESTINATIONS GALLERY (Min 6 items, columns, borders)
+    */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1rem 0;
+}
+
+.gallery figure {
+    margin: 0;
+    width: 300px;
+    text-align: center;
+    border: 2px solid #DBDBDB; /* Border separating destinations */
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.gallery figure:hover {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.gallery img {
+    width: 276px;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    border-radius: 4px;
+}
+
+.gallery figcaption {
+    padding-top: 0.75rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #443742;
+}
+
+/* 
+   VACATION PACKAGES LAYOUT
+    */
+.package-card {
+    background: #ffffff;
+    border: 2px solid #DBDBDB;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.package-card img {
+    width: 40%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.package-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    background-color: #FAF7F2;
+    padding: 12px;
+    border-radius: 6px;
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+.gallery figure a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.myForm {
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.myForm fieldset {
+    border: 2px solid #DBDBDB;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-bottom: 25px;
+    background-color: #ffffff;
+}
+
+.myForm legend {
+    padding: 0 10px;
+    font-weight: bold;
+    color: #443742;
+    background-color: #FAF7F2;
+    border: 1px solid #DBDBDB;
+    border-radius: 4px;
+}
+
+/* Straight line eye tracking: Instructions strictly ABOVE inputs */
+.myForm label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #443742;
+    font-weight: 700;
+}
+
+.myForm input[type="text"],
+.myForm input[type="email"],
+.myForm input[type="tel"],
+.myForm select,
+.myForm textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #DBDBDB;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: #fcfcfc;
+    color: #443742;
+}
+
+.myForm .radio-group label {
+    display: inline-block;
+    font-weight: normal;
+    margin-right: 15px;
+    margin-top: 5px;
+}
+
+.myForm input[type="radio"] {
+    display: inline-block;
+    width: auto;
+    margin-right: 5px;
+}
+
+.myForm input[type="submit"] {
+    background-color: #443742;
+    color: #52796F;
+    border: 2px solid #443742;
+    border-radius: 6px;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    background-image: linear-gradient(to bottom, #443742, #404452);
+    transition: opacity 0.2s ease;
+}
+
+.myForm input[type="submit"]:hover {
+    opacity: 0.9;
+}
+
+/* 
+   FOOTER
+    */
+footer a {
+    color: #52796F;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}

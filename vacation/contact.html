@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Emily Critchfield">
+    <meta name="description" content="Request information or custom quotes from Budget Vacations.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="travler.css">
+    <link rel="icon" type="image/webp" href="images/logo.webp">
+    <title>Contact Us - Budget Vacations</title>
+    
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="images/logo.webp" alt="Budget Vacations logo" class="site-logo">
+            <div>
+                <h1>Budget Vacations</h1>
+                <span>Explore the World Without Breaking the Bank</span>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="media.html">Video</a></li>
+            <li class="active"><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Request Information</h1>
+        <p>Fill out the form below to ask questions about our packages or request a custom itinerary quote from our travel specialists.</p>
+
+        <form action="thanks.html" method="get" class="myForm">
+            
+<fieldset>
+    <legend>Personal Information</legend>
+
+    <label for="fname">First Name:</label>
+    <input type="text" id="fname" name="fname" required>
+
+    <label for="lname">Last Name:</label>
+    <input type="text" id="lname" name="lname" required>
+
+    <label for="city">Departure City / Airport:</label>
+    <input type="text" id="city" name="city" placeholder="e.g. Salt Lake City, UT" required>
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required>
+</fieldset>
+
+            <fieldset>
+                <legend>Travel Preferences</legend>
+
+                <label for="destination">Preferred Destination:</label>
+                <select id="destination" name="destination" required>
+                    <option value="">--Please choose an option--</option>
+                    <option value="rome">Rome, Italy</option>
+                    <option value="cancun">Cancun, Mexico</option>
+                    <option value="santorini">Santorini, Greece</option>
+                </select>
+
+                <label>Vacation Style:</label>
+                <div class="radio-group">
+                    <input type="radio" id="style1" name="vacation_style" value="beach" required>
+                    <label for="style1">Beach &amp; Relaxation</label>
+                    
+                    <input type="radio" id="style2" name="vacation_style" value="cultural">
+                    <label for="style2">Cultural Exploration</label>
+                    
+                    <input type="radio" id="style3" name="vacation_style" value="adventure">
+                    <label for="style3">Adventure &amp; Outdoors</label>
+                </div>
+
+                <label for="comments">Additional Comments or Special Requests:</label>
+                <textarea id="comments" name="comments" rows="5" placeholder="Tell us your travel dates or budget constraints..."></textarea>
+            </fieldset>
+
+            <input type="submit" value="Submit Request">
+        </form>
+    </main>
+
+    <footer>
+        <address>
+            Budget Vacations Headquarters<br>
+            450 S 900 E, Suite 200<br>
+            Salt Lake City, UT 84102
+        </address>
+        <p>&copy; 2026 Budget Vacations. All rights reserved.</p>
+    </footer>
+</body>
+</html>
